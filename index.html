@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima Atual</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <div class="searchContainer">
+            <h2>
+                Confira o clima de uma cidade:
+            </h2>
+
+            <div class="search">
+                <input type="search" class="cityInput" placeholder="Informe a cidade">
+    
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="infos hide">
+
+            <div class="cityName">
+                <i class="fa-solid fa-location-dot"></i>
+                <span></span>
+                <img class="cityFlag" class="flagCity"></img>
+            </div>
+
+            <div class="temperature">
+             <p><span></span>&deg;C</p>
+            </div>
+
+            <div class="condition">
+                <span></span>
+                <img src="" alt="Condições Atuais">
+            </div>
+
+            <div class="humidity">
+                <i class="fa-solid fa-droplet"></i> 
+            <span></span>
+            </div>
+
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+            <span></span>
+            </div>
+
+        </div>
+
+        <div class="error hide">
+            Cidade não encontrada!!!
+            Digite Novamente
+        </div>
+
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
