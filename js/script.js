@@ -20,6 +20,9 @@ const contentError = document.querySelector('.error')
 
 //Funções 
 
+
+
+
 const hideInfos = () => {
 
     contentInfo.classList.remove('hide');
@@ -33,7 +36,7 @@ const getWeather = async (city) => {
     const res = await fetch(apiWeatherURL);
     const weather = await res.json();
 
-    if (weather.cod = "404") {
+    if (weather.cod == "404") {
         contentError.classList.remove('hide');
         return;
     }
@@ -44,9 +47,9 @@ const getWeather = async (city) => {
     condition.innerHTML = weather.weather[0].description;
     conditionIcon.setAttribute('src' , `http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`);
     humidity.innerHTML = `${weather.main.humidity}%`;
-    wind.innerHTML = `${weather.wind.speed}km/h`
+    wind.innerHTML = `${weather.wind.speed}km/h`;
 
-    document.body.style.backgroundImage = `url("${unsplashAPIUrl + city}")`;
+    document.body.style.backgroundImage = `url("${unsplashAPIUrl + weather.name}")`
 
     hideInfos();
 
