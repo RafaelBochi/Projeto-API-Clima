@@ -31,12 +31,15 @@ const hideInfos = () => {
 
 const getWeather = async (city) => {
 
+    contentError.classList.add('hide');
+
     const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${keyAPI}&lang=pt_br`;
 
     const res = await fetch(apiWeatherURL);
     const weather = await res.json();
 
     if (weather.cod == "404") {
+        contentInfo.classList.add('hide');
         contentError.classList.remove('hide');
         return;
     }
